@@ -1,0 +1,192 @@
+@font-face {
+  font-family: "Righteous";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/righteous/v13/1cXxaUPXBpj2rGoU7C9WhnGFucE.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJbecmNE.woff2)
+    format("woff2");
+  unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8,
+    U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu72xKOzY.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url(/assests/retro-living-room-interior-design.jpg) no-repeat
+    center center fixed;
+  background-size: cover;
+}
+/* NAV BAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto";
+  padding: 30px;
+  color: white;
+}
+.logo {
+  align-self: center;
+}
+.rightSection {
+  display: flex;
+  border-bottom: 2px solid white;
+  padding-top: 13px;
+  padding-bottom: 37px;
+}
+.list {
+  align-self: center;
+}
+.listItems {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-column-gap: 83px;
+}
+.listItem {
+  list-style-type: none;
+  font-size: larger;
+  font-weight: bold;
+}
+.number {
+  display: flex;
+  align-items: flex-start;
+  align-self: center;
+}
+/* SECTION BOTTOM */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-family: "Roboto";
+  padding: 100px;
+}
+.left {
+  position: relative;
+  left: 60px;
+}
+
+.left h1 {
+  font-size: 60px;
+}
+.largeButton {
+  width: 200px;
+  height: 57px;
+  font-family: "Roboto";
+  font-size: larger;
+  border-radius: 28px;
+  border: 3px solid white;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  top: 89px;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+}
+.puzzle {
+  width: 260px;
+  height: 132px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  grid-template-rows: 84px 23px;
+}
+.img {
+  height: 39px;
+  width: 70px;
+  background-color: white;
+  border-radius: 27px;
+  padding-left: 19px;
+  margin-bottom: 0px;
+}
+.puzzImg {
+  width: 53px;
+}
+.line {
+  border-left: 1px solid white;
+  height: 64px;
+  position: relative;
+  left: 208px;
+}
+.circle {
+  width: 16px;
+  height: 16px;
+  border: 1px solid white;
+  border-radius: 9px;
+  background-color: white;
+  position: relative;
+  left: 200px;
+}
+.bulb {
+  width: 260px;
+  height: 160px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  grid-template-rows: 84px 23px;
+}
+.bimg {
+  height: 39px;
+  width: 70px;
+  background-color: white;
+  border-radius: 27px;
+  padding-left: 19px;
+  margin-bottom: 0px;
+}
+.bulbImg {
+  width: 55px;
+  height: 38px;
+}
+
+.rightPuzzle {
+  position: relative;
+  bottom: 64px;
+  right: 141px;
+}
+.rightBulb {
+  position: relative;
+  right: 386px;
+}
+.lineBulb {
+  border-top: 1px solid white;
+  height: 38px;
+  width: 76px;
+  position: relative;
+  left: 260px;
+  bottom: 121px;
+}
+.circleBulb {
+    width: 16px;
+    height: 16px;
+    border: 1px solid white;
+    border-radius: 9px;
+    background-color: white;
+    position: relative;
+    left: 336px;
+    bottom: 167px;
+}
