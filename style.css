@@ -38,55 +38,129 @@ body {
   background-size: cover;
 }
 /* NAV BAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  font-family: "Roboto";
-  padding: 30px;
-  color: white;
+@media only screen and (min-width:1253px){
+  nav {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Roboto";
+    padding: 30px;
+    color: white;
+  }
+  .logo {
+    align-self: center;
+  }
+  .rightSection {
+    display: flex;
+    border-bottom: 2px solid white;
+    padding-top: 13px;
+    padding-bottom: 37px;
+  }
+  .list {
+    align-self: center;
+  }
+  .listItems {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-column-gap: 83px;
+  }
+  .listItem {
+    list-style-type: none;
+    font-size: larger;
+    font-weight: bold;
+  }
+  .number {
+    display: flex;
+    align-items: flex-start;
+    align-self: center;
+  }
 }
-.logo {
-  align-self: center;
+@media only screen and (max-width:1253px){
+  nav {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Roboto";
+    margin-left:50px;
+    margin-right: 50px;
+    color: white;
+  }
+  .logo {
+    align-self: center;
+  }
+  .listItems {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-column-gap: 83px;
+  }
+  .listItem {
+    list-style-type: none;
+    font-size: larger;
+    font-weight: bold;
+  }
+  .rightSection {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 37px;
+  }
+  .listItems {
+    display: none;
+  }
+  .rightSection {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 37px;
+  }
+  .listItems {
+    display: none; 
+  } 
+  .number {
+    display: flex;
+    align-items: flex-start;
+    margin-top:19px;
+  }
 }
-.rightSection {
-  display: flex;
-  border-bottom: 2px solid white;
-  padding-top: 13px;
-  padding-bottom: 37px;
-}
-.list {
-  align-self: center;
-}
-.listItems {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  grid-column-gap: 83px;
-}
-.listItem {
-  list-style-type: none;
-  font-size: larger;
-  font-weight: bold;
-}
-.number {
-  display: flex;
-  align-items: flex-start;
-  align-self: center;
-}
-/* SECTION BOTTOM */
-.bottom {
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  font-family: "Roboto";
-  padding: 100px;
-}
-.left {
-  position: relative;
-  left: 60px;
+@media only screen and (max-width:509px){
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto";
+    margin-top: 20px;
+    margin-left:50px;
+    margin-right: 50px;
+    color: white;
+  }
+  .rightSection {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 37px;
+  }
+  .listItems { 
+    display: none;
+  } 
+  .number {
+    display: flex;
+    align-items: flex-start;
+    margin-top:19px;
+  }
 }
 
+
+/* SECTION BOTTOM */
+@media only screen and (min-width:1253px){
+.bottom{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-family: "Roboto";
+  margin-left: 30px;
+  margin-right: 120px;
+  
+}
 .left h1 {
   font-size: 60px;
+  margin-top: 100px;
+  margin-left:100px;
 }
 .largeButton {
   width: 200px;
@@ -99,14 +173,19 @@ nav {
   color: white;
   font-weight: bold;
   cursor: pointer;
-  position: relative;
-  top: 89px;
-}
-.right {
-  display: flex;
-  flex-direction: column;
+  margin-top: 89px;
+  margin-left:100px;
 }
 .puzzle {
+  width: 260px;
+  height: 132px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  grid-template-rows: 84px 23px;
+}
+.bulb {
   width: 260px;
   height: 132px;
   display: grid;
@@ -126,30 +205,6 @@ nav {
 .puzzImg {
   width: 53px;
 }
-.line {
-  border-left: 1px solid white;
-  height: 64px;
-  position: relative;
-  left: 208px;
-}
-.circle {
-  width: 16px;
-  height: 16px;
-  border: 1px solid white;
-  border-radius: 9px;
-  background-color: white;
-  position: relative;
-  left: 200px;
-}
-.bulb {
-  width: 260px;
-  height: 160px;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  grid-template-rows: 84px 23px;
-}
 .bimg {
   height: 39px;
   width: 70px;
@@ -162,15 +217,34 @@ nav {
   width: 55px;
   height: 38px;
 }
-
-.rightPuzzle {
-  position: relative;
-  bottom: 64px;
-  right: 141px;
+.righty {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-top:50px;
+  margin-right:100px;
 }
-.rightBulb {
+.rightBulb{
+  margin-right: 300px;
+ }
+ .rightPuzzle{
+  margin-left: 300px;
+ }
+ .line {
+  border-left: 1px solid white;
+  height: 64px;
   position: relative;
-  right: 386px;
+  left: 207px;
+ }
+ .circle {
+  width: 16px;
+  height: 16px;
+  border: 1px solid white;
+  border-radius: 9px;
+  background-color: white;
+  position: relative;
+  left: 200px;
+  
 }
 .lineBulb {
   border-top: 1px solid white;
@@ -178,7 +252,7 @@ nav {
   width: 76px;
   position: relative;
   left: 260px;
-  bottom: 121px;
+  bottom: 80px;
 }
 .circleBulb {
     width: 16px;
@@ -188,5 +262,246 @@ nav {
     background-color: white;
     position: relative;
     left: 336px;
-    bottom: 167px;
+    bottom: 126px;
+}
+}
+
+@media only screen and (max-width:1253px) and (min-width:1020px){
+  .bottom{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: "Roboto";
+    margin-left: 30px;
+    margin-right: 120px;
+    
+  }
+  .left h1 {
+    font-size: 60px;
+    margin-top: 100px;
+    margin-left:30px;
+  }
+  .largeButton {
+    width: 200px;
+    height: 57px;
+    font-family: "Roboto";
+    font-size: larger;
+    border-radius: 28px;
+    border: 3px solid white;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 89px;
+    margin-left:30px;
+  }
+  .puzzle {
+    width: 260px;
+    height: 132px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    grid-template-rows: 84px 23px;
+  }
+  .bulb {
+    width: 260px;
+    height: 132px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    grid-template-rows: 84px 23px;
+  }
+  .img {
+    height: 39px;
+    width: 70px;
+    background-color: white;
+    border-radius: 27px;
+    padding-left: 19px;
+    margin-bottom: 0px;
+  }
+  .puzzImg {
+    width: 53px;
+  }
+  .bimg {
+    height: 39px;
+    width: 70px;
+    background-color: white;
+    border-radius: 27px;
+    padding-left: 19px;
+    margin-bottom: 0px;
+  }
+  .bulbImg {
+    width: 55px;
+    height: 38px;
+  }
+  .righty {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-top:50px;
+    margin-right:90px;
+  }
+  .rightBulb{
+    margin-right: 100px;
+   }
+   .rightPuzzle{
+    margin-left: 100px;
+   }
+   .line {
+    border-left: 1px solid white;
+    height: 64px;
+    position: relative;
+    left: 207px;
+   }
+   .circle {
+    width: 16px;
+    height: 16px;
+    border: 1px solid white;
+    border-radius: 9px;
+    background-color: white;
+    position: relative;
+    left: 200px;
+    
+  }
+  .lineBulb {
+    border-top: 1px solid white;
+    height: 38px;
+    width: 76px;
+    position: relative;
+    left: 260px;
+    bottom: 80px;
+  }
+  .circleBulb {
+      width: 16px;
+      height: 16px;
+      border: 1px solid white;
+      border-radius: 9px;
+      background-color: white;
+      position: relative;
+      left: 336px;
+      bottom: 126px;
+  }
+}
+
+@media only screen and (max-width:1020px){
+  .bottom{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: "Roboto";
+    margin-left: 50px;
+    margin-right: 120px;
+    
+  }
+  .left h1 {
+    font-size: 50px;
+    margin-top: 50px;
+    margin-left:30px;
+    text-align: center;
+  }
+  .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .largeButton {
+    width: 180px;
+    height: 57px;
+    font-family: "Roboto";
+    font-size: larger;
+    border-radius: 28px;
+    border: 3px solid white;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 50px;
+  }
+  .puzzle {
+    width: 260px;
+    height: 132px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    grid-template-rows: 84px 23px;
+  }
+  .bulb {
+    width: 260px;
+    height: 132px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    grid-template-rows: 84px 23px;
+  }
+  .img {
+    height: 39px;
+    width: 70px;
+    background-color: white;
+    border-radius: 27px;
+    padding-left: 19px;
+    margin-bottom: 0px;
+  }
+  .puzzImg {
+    width: 53px;
+  }
+  .bimg {
+    height: 39px;
+    width: 70px;
+    background-color: white;
+    border-radius: 27px;
+    padding-left: 19px;
+    margin-bottom: 0px;
+  }
+  .bulbImg {
+    width: 55px;
+    height: 38px;
+  }
+  .righty {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top:50px;
+    margin-bottom: 50px;
+    /* margin-right:90px; */
+  }
+  .line {
+    border-left: 1px solid white;
+    height: 64px;
+    position: relative;
+    left: 207px;
+   }
+   .circle {
+    width: 16px;
+    height: 16px;
+    border: 1px solid white;
+    border-radius: 9px;
+    background-color: white;
+    position: relative;
+    left: 200px;
+    
+  }
+  .lineBulb {
+    border-top: 1px solid white;
+    height: 38px;
+    width: 76px;
+    position: relative;
+    left: 260px;
+    bottom: 80px;
+  }
+  .circleBulb {
+      width: 16px;
+      height: 16px;
+      border: 1px solid white;
+      border-radius: 9px;
+      background-color: white;
+      position: relative;
+      left: 336px;
+      bottom: 126px;
+  }
 }
